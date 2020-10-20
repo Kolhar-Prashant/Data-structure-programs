@@ -89,7 +89,7 @@ void remove_node(int d)
   }
   else
   {
-    trav -> next = NULL;
+    prev -> next = NULL;
   }
 }
   
