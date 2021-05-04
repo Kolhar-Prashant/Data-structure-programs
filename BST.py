@@ -17,20 +17,19 @@ class BST:
         self.right = None
 
     def insert(self,num,root):
-        temp = root
-        if num < temp.val:
-            if temp.left == None:
+        if num < root.val:
+            if root.left == None:
                 t = BST(num)
-                temp.left = t
+                root.left = t
             else:
-                root = temp.left
+                root = root.left
                 BST.insert(self,num,root)
         else:
-            if temp.right == None:
+            if root.right == None:
                 t = BST(num)
-                temp.right = t
+                root.right = t
             else:
-                root = temp.right
+                root = root.right
                 BST.insert(self,num,root)
 
 List = [8,5,9,2,7,11]
