@@ -15,15 +15,10 @@ class Tree:
     def pre_order(self,root):
         if root != None:
             print(root.val)
-            Tree.pre_order(self,root.left)
-            Tree.pre_order(self,root.right)
-
-    def Count_leafnodes(self,root):
-        if root != None:
             if root.left == None and root.right == None:
                 mem[0]+=1
-            Tree.Count_leafnodes(self,root.left)
-            Tree.Count_leafnodes(self,root.right)
+            Tree.pre_order(self,root.left)
+            Tree.pre_order(self,root.right)
 
 L = [1,2,3,4,-1,6,7]
 Queue = []
@@ -31,7 +26,7 @@ T = Tree(L[0])
 const_root = T
 root = T
 side = 1
-
+mem = [0]
 for val in L[1:]:
     if val != -1:
         T.create(val,side)
@@ -42,6 +37,4 @@ for val in L[1:]:
         Queue.pop(0)
 Queue.clear()
 T.pre_order(const_root)
-mem = [0]
-T.Count_leafnodes(const_root)
 print("Leaf nodes in this Binary tree",mem[0])
