@@ -22,7 +22,7 @@ mat = [[-1,-1,-1,-1,-1,-1,-1],
        [-1,0,0,0,1,0,0]]
 Queue = []
 BFS = []
-start_node = 3
+start_node = 3  # Provide starting vertex/node.
 mem = [start_node]
 BFS.append(start_node)
 explore(start_node)
