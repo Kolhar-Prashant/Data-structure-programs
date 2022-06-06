@@ -31,7 +31,7 @@ class LL:
             t = t.next
 
 
-L = ['0', 'R', 'E', 'Z']
+L = ['POOJA','PRASHANT']
 L1 = LL(L[0])
 head = L1
 for v in L[1:]:
